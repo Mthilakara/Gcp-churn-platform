@@ -30,15 +30,9 @@ This platform turns raw churn data into ML-ready features (dbt), trains a model 
 
 ---
 
-## High-level architecture (flow)
+## High-level architecture
 
-**Data path**
-
-**Serving + ops**
-
-**CI/CD**
-
-![Project Architecture](images/Project_diagram.png)
+![Project Architecture](Project_diagram.png)
 
 ---
 
