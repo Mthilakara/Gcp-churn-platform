@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_customer_churn
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: customer_churn_clean_dbt
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+      - name: churn_flag
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+
+      - name: tenure
+        tests:
+          - not_null
+
+      - name: monthly_charges
+        tests:
+          - not_null

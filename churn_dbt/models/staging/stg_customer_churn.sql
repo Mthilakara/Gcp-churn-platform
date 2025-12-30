@@ -1,0 +1,23 @@
+select
+  customerID as customer_id,
+  gender,
+  cast(SeniorCitizen as int64) as senior_citizen,
+  Partner,
+  Dependents,
+  cast(tenure as int64) as tenure,
+  PhoneService,
+  MultipleLines,
+  InternetService,
+  OnlineSecurity,
+  OnlineBackup,
+  DeviceProtection,
+  TechSupport,
+  StreamingTV,
+  StreamingMovies,
+  Contract,
+  PaperlessBilling,
+  PaymentMethod,
+  cast(MonthlyCharges as float64) as monthly_charges,
+  TotalCharges,
+  Churn
+from {{ source('churn_raw', 'customer_churn_raw') }}

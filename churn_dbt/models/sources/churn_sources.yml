@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: churn_raw
+    database: gcp-churn-platform
+    schema: churn_analytics
+    tables:
+      - name: customer_churn_raw
